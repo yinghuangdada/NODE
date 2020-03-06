@@ -1,0 +1,57 @@
+1.package-lock
+
+2.MongoDB
+安装：
+配置环境变量：找到环境变量里面的变量表的path项，选中编辑，添加mongodb的bin文件
+所在的路径即可
+启动：mongod
+改变数据默认存储路径：
+mongod --dbpath 数据存储路径
+关闭：
+Ctrl+C
+
+链接数据库：
+确保开启数据库
+新开命令行窗口
+在所在盘下如D盘下
+mongo 
+默认链接本地数据库
+
+退出
+exit
+
+基本命令：
+show dbs 查看数据库列表
+db 查看当前操作的数据库
+use 数据库名称   切换到指定数据库（如果没有新建）
+插入数据
+db.students.insert({"name":"111"}) 在当前数据库下插入数据（如果当前数据库未存在，数据表格未存在，默认创建）
+ db.students.find() 查找数据表下的数据
+
+ 3、在node中操作MongoDB
+ NPM找用法，官方原生用法
+ 使用第三方mongoose来操作MongoDB数据库
+
+ mongoosejs.com
+
+
+
+ 4.node 链接mysql
+
+ 安装：npm i mysql
+
+ 可视化工具：Navicat Premium
+
+
+ 5.回调地狱 Promise
+ 回调嵌套回调
+
+同一个层级的代码，异步请求无法保证回调的循序
+需要通过回调嵌套回调的方法来解决
+
+
+为了解决以上编码方式带来的问题（回调地狱嵌套），所以在EcmaScript 6中新增了一个API：promise
+
+封装promise API
+ 
+
