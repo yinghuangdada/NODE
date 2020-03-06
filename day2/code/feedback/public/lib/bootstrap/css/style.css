@@ -1,0 +1,36 @@
+.yst-top {
+	height: 100px;
+	line-height: 100px;
+	position: relative;
+	min-width: 1400px;
+}
+
+.navbar-nav {
+	float: none;
+	text-align: center;
+}
+
+ul.nav.navbar-nav li {
+	float: none;
+	display: inline-block;
+	margin: 0em;
+}
+
+
+.yst-nav{
+	position: relative;
+}
+.yst-nav div:first-child{
+	min-width: 600px;
+}
+
+.yst-mime {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.yst-mime img {
+	width: 46px;
+	height: 46px;
+}
