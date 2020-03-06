@@ -1,0 +1,57 @@
+1.文件路径的问题
+
+2.安装全局自动重启工具
+第三方命名工具：nodemon，可以帮助接解决修改代码频繁重启服务器的问题
+nodemon是一个基于node.js开发的第三方命令行工具，使用的时候可以独立安装
+npm install --global nodemon
+调用语法：
+nodemon app.js就可以重启app.js了
+
+3.基本路由
+
+4.静态资源开放
+/public资源
+app.use(express.static('./public/'));
+
+/static资源
+app.use(express.static('./files/'));
+
+/public/xxx
+app.use('/static',express.static('public'));
+
+app.use('/static',express.static(path,join(__dirname,'public')));
+
+5.安装art-template模板引擎
+
+6.Express的post请求方法的中间件body-parser
+安装 ：  $ npm install --save body-parser
+API ： var express = require('express')
+
+Examples：
+var bodyParser = require('body-parser')
+
+var app = express()
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
+app.use(function (req, res) {
+  res.setHeader('Content-Type', 'text/plain')
+  res.write('you posted:\n')
+  res.end(JSON.stringify(req.body, null, 2))
+})
+
+
+
+7.crud起步
+
+8.crud路由设计
+|请求方法|请求路径       |get参数|post参数                        |备注|
+|get     | /students     |       |                               |渲染页面|
+|get     | /sudents/new  |       |                               |渲染页面|
+|post    | /students     |       |name、age、gender、hobbies     |处理添加的学生信息|
+|get     | /sudents/edit |   id  |                               |渲染请求参数|
+|post    | /student/edit |       |id、name、age、gender、hobbies |                      
