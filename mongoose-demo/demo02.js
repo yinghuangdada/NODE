@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/itcast');
 
 //2.设计集合（表）结构
-// 字段名称就是表结构中的属性名吃
+// 字段名称就是表结构中的属性名字
 // 约束的目的是为了保证数据的完整性，不要有脏数据
 // var blogschema = new Schema({
 //     title:String,
