@@ -1,6 +1,6 @@
 var express = require('express');
 
-//穿件服务器程序
+//创建服务器程序
 var app = express();
 
 //公开指定目录
@@ -16,6 +16,6 @@ app.get('/about', function (req, res) {
     res.send('hello about');
 });
 
-app.listen(80, function () {
-    console.log('app is running at port 8080.')
+app.listen(3000, function () {
+    console.log('app is running at port 3000.')
 });
